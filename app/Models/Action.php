@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Action extends Model
+{
+    public function outgoingEvent(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Event::class, 'outgoing_event_id');
+    }
+
+    public function incomingEvent1(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Event::class, 'incoming_event_id_1');
+    }
+
+    public function incomingEvent2(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Event::class, 'incoming_event_id_2');
+    }
+}
+
