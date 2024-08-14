@@ -15,12 +15,7 @@ class Event extends Model
 
     public function incomingActions1(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(Action::class, 'incoming_event_id_1');
-    }
-
-    public function incomingActions2(): \Illuminate\Database\Eloquent\Relations\HasMany
-    {
-        return $this->hasMany(Action::class, 'incoming_event_id_2');
+        return $this->hasMany(Action::class, 'incoming_event_id');
     }
 }
 

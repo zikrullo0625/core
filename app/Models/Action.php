@@ -13,12 +13,7 @@ class Action extends Model
 
     public function incomingEvent1(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(Event::class, 'incoming_event_id_1');
-    }
-
-    public function incomingEvent2(): \Illuminate\Database\Eloquent\Relations\BelongsTo
-    {
-        return $this->belongsTo(Event::class, 'incoming_event_id_2');
+        return $this->belongsTo(Event::class, 'incoming_event_id');
     }
 }
 
