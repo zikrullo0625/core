@@ -11,7 +11,7 @@ class Action extends Model
         return $this->belongsTo(Event::class, 'outgoing_event_id');
     }
 
-    public function incomingEvent1(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function incomingEvent(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Event::class, 'incoming_event_id');
     }
